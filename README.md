@@ -12,11 +12,11 @@ Unlike static RAG or simple sliding-window contexts, CogniMem implements a tripa
 
 ##  Key Features
 
-- ** Tripartite Memory Architecture**: Separates memory into *Working* (short-term cache), *Episodic* (vector-based experiences), and *Semantic* (graph-based distilled facts).
-- ** Ebbinghaus Forgetting Curve**: Automatically decays the importance of unused memories over time and prunes irrelevant data, preventing context poisoning.
-- ** Hybrid Associative Retrieval**: Combines vector similarity with cognitive importance scores and graph relationships for human-like, context-aware recall.
-- ** Framework Agnostic**: Drop-in wrappers for LangChain, AutoGen, CrewAI, and a universal SDK for custom Python/Node.js agents.
-- ** `uv` Optimized**: Lightning-fast dependency resolution and deterministic locking out of the box.
+-  Tripartite Memory Architecture: Separates memory into *Working* (short-term cache), *Episodic* (vector-based experiences), and *Semantic* (graph-based distilled facts).
+-  Ebbinghaus Forgetting Curve: Automatically decays the importance of unused memories over time and prunes irrelevant data, preventing context poisoning.
+-  Hybrid Associative Retrieval: Combines vector similarity with cognitive importance scores and graph relationships for human-like, context-aware recall.
+-  Framework Agnostic: Drop-in wrappers for LangChain, AutoGen, CrewAI, and a universal SDK for custom Python/Node.js agents.
+-  `uv` Optimized: Lightning-fast dependency resolution and deterministic locking out of the box.
 
 ---
 
@@ -74,7 +74,7 @@ print(context)
 
 ---
 
-## 🔌 Agent Integrations
+##  Agent Integrations
 
 CogniMem is built to require **minor changes** to your existing codebase. Choose your framework below:
 
@@ -184,7 +184,7 @@ graph TD
     B -->|Persist| C[(Episodic Memory<br/>Vector DB)]
     
     C -->|Background 'Sleep' Cycle| D{Consolidation Engine}
-    D -->|Score < 0.1| E[(🗑️ Forgotten/Pruned)]
+    D -->|Score < 0.1| E[( Forgotten/Pruned)]
     D -->|Score > 0.7| F[(Semantic Memory<br/>Knowledge Graph)]
     
     G[Agent Query] --> H[Hybrid Retriever]
@@ -211,11 +211,11 @@ We welcome contributions! Whether it's adding support for a new agent framework 
 
 ---
 
-## 📜 License
+##  License
 
 This project is licensed under the **MIT License** - see the [LICENSE](LICENSE) file for details. Feel free to use it in commercial and open-source agentic AI projects.
 
 ---
 
-###💡 Pro Tip for Developers:
+### Pro Tip for Developers:
 If you are building a multi-agent system, simply instantiate `CogniMem(agent_id="shared_team_memory")` for all agents to give them a **collective hive-mind**, or use unique IDs (`agent_id="agent_a"`) to give them distinct, personalized personalities and experiences!
