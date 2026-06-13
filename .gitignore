@@ -1,0 +1,17 @@
+# Python cache
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environments
+.venv/
+venv/
+env/
+
+# Local memory databases created by CogniMem
+chroma_db_*/
+semantic_graph_*.json
+
+# OS files
+.DS_Store
+Thumbs.db
