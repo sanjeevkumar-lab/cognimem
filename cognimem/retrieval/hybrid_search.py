@@ -1,7 +1,7 @@
 from sentence_transformers import SentenceTransformer
-from cogimem.core.episodic_memory import EpisodicMemory
-from cogimem.core.semantic_memory import SemanticMemory
-from cogimem.models import Memory
+from cognimem.core.episodic_memory import EpisodicMemory
+from cognimem.core.semantic_memory import SemanticMemory
+from cognimem.models import Memory
 import yaml
 
 class HybridRetriever:

@@ -10,8 +10,9 @@ dependencies = [
     "sentence-transformers>=2.3.1",
     "pydantic>=2.6.1",
     "apscheduler>=3.10.4",
-    "numpy>=1.26.4",
-    "langchain>=0.1.9",
+    "numpy>=1.26.4,<2.0.0",       
+    "langchain-core>=0.1.9",       
+    "langchain-community>=0.0.10", 
     "pyyaml>=6.0.1",
     "fastapi>=0.109.0",
     "uvicorn>=0.27.0",
@@ -22,8 +23,7 @@ requires = ["hatchling"]
 build-backend = "hatchling.build"
 
 [tool.uv]
-# Optional: Pin specific versions or add dev dependencies here
 dev-dependencies = [
     "pytest>=8.0.0",
-    "ruff>=0.3.0",
+    "black>=24.0.0",
 ]

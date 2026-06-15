@@ -1,6 +1,6 @@
 from collections import deque
 from typing import List
-from cogimem.models import Memory
+from cognimem.models import Memory
 
 class WorkingMemory:
     def __init__(self, limit: int = 10):

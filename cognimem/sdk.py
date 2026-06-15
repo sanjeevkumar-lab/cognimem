@@ -1,9 +1,10 @@
-from cogimem.core.working_memory import WorkingMemory
-from cogimem.core.episodic_memory import EpisodicMemory
-from cogimem.core.semantic_memory import SemanticMemory
-from cogimem.core.consolidation import ConsolidationEngine
-from cogimem.retrieval.hybrid_search import HybridRetriever
-from cogimem.models import Memory
+from cognimem.core.working_memory import WorkingMemory
+from cognimem.core.episodic_memory import EpisodicMemory
+from cognimem.core.semantic_memory import SemanticMemory
+from cognimem.core.consolidation import ConsolidationEngine
+from cognimem.retrieval.hybrid_search import HybridRetriever
+from cognimem.models import Memory
+from typing import Optional
 import yaml
 
 class CogniMem:
@@ -18,7 +19,7 @@ class CogniMem:
         self.consolidator = ConsolidationEngine(self.em, self.sm)
         self.retriever = HybridRetriever(self.em, self.sm)
 
-    def remember(self, content: str, importance: float = 0.5, tags: list = None):
+    def remember(self, content: str, importance: float = 0.5, tags: Optional[list] = None):
         tags = tags or []
         mem = Memory(
             agent_id=self.agent_id, 

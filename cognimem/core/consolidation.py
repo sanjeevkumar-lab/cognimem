@@ -1,8 +1,8 @@
 import numpy as np
 from datetime import datetime
 from apscheduler.schedulers.background import BackgroundScheduler
-from cogimem.core.episodic_memory import EpisodicMemory
-from cogimem.core.semantic_memory import SemanticMemory
+from cognimem.core.episodic_memory import EpisodicMemory
+from cognimem.core.semantic_memory import SemanticMemory
 import yaml
 
 class ConsolidationEngine:

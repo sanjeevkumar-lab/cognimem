@@ -1,5 +1,5 @@
 import time
-from cogimem.sdk import CogniMem
+from cognimem.sdk import CogniMem
 
 def main():
     print("Initializing CogniMem Agent...")
@@ -18,7 +18,7 @@ def main():
     print("\n--- 3. Simulating Time Passing (Decay) ---")
     print("Manually triggering consolidation to simulate 48 hours passing...")
     from datetime import datetime, timedelta
-    from cogimem.core.consolidation import ConsolidationEngine
+    from cognimem.core.consolidation import ConsolidationEngine
     
 
     memories = agent.em.get_all()

@@ -1,9 +1,17 @@
+agent:
+  default_id: "default_agent"
+
 memory:
-  working_memory_limit: 10       # Max items in immediate short-term cache
-  consolidation_interval_hours: 6 # How often the "sleep cycle" runs
-  decay_constant_k: 24           # Ebbinghaus curve: Higher = slower forgetting
-  promotion_threshold: 0.7       # Score required to move Episodic -> Semantic (Fact)
-  pruning_threshold: 0.1         # Score below which memory is permanently forgotten
+  working_memory_limit: 10
+  consolidation_interval_hours: 6
+  decay_constant_k: 24
+  promotion_threshold: 0.7
+  pruning_threshold: 0.1
+
+embedding:
+  model: "all-MiniLM-L6-v2"
+
 retrieval:
-  vector_weight: 0.6             # Weight of semantic/vector similarity in recall
-  importance_weight: 0.4         # Weight of memory importance/recency in recall
+  vector_weight: 0.6
+  importance_weight: 0.4
+  top_k: 5
